@@ -1,0 +1,68 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mergesort takes 0 and the array length
+
+the workingHigh variable is set to half the distance between the low and high nodes
+repeats until the array has been cut to one node
+mergesort is called on workingHigh as the low input, and high as the high input
+these are the same, so mergeSort's recursion is exited and merge is called with low, workingHigh, and high
+
+
+
+
+
+the original array is copied from the low index to the high index
+
+the low index to work on is set to the low argument,
+the high index is set to the middle argument + 1
+a reference for the original array's low value is set to the low argument
+
+while the working low index is less than the middle argument & the workingHigh index is less than the high argument
+if the value in the helper array at the workingLow index is less than the value in helper at the workingHigh index
+they are already ordered - the original array's value at the index of originalLow is set to helper at index workingLow
+workingLow is incremented so calls to workingLow now focus on the next lower index of helper
+if the value is not less
+the value of the original array at the index of originalLow is set to the value of helper at the index of workingHigh
+and workingHigh is incremented so calls to workingHigh now focus on the next upper index of helper
+(the value of origArray at the index of originalLow is now the lower of the two values, need to set the next index
+next originalLow is incremented so calls to originalLow now focus on the next index of originalArray
+
+while workingLow is less or equal the middle argument - likely equal -
+set the origArray value at the new originalLow index to equal the helperArray at index workingLow
+increment workingLow to focus on the next index in helper
+increment originalLow to focus on the next index in originalArray
+workingLow is now greater than middle - loop exits
+
+
+
+
+
+
+
+
+
+
+
+
