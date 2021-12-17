@@ -39,8 +39,7 @@ public class App {
                     1: Output sequence of depth first traversal.
                     2: Output sequence of breadth first traversal.
                     3: Output both
-                    4: Start Over
-                    5: Exit
+                    4: Exit
                     """);
             choiceSwitch(keyboard.nextInt());
         } catch (Exception e) {
@@ -87,13 +86,10 @@ public class App {
                 g.depth(start, target);
             }
             case 4 -> {
-                System.out.println("\nRestarting.\n");
-                initGraph();
-            }
-            case 5 -> {
                 System.out.println("\nExiting.\n");
                 System.exit(0);
             }
+
         }
     }
 }
